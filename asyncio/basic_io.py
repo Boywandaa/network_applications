@@ -1,13 +1,9 @@
 import asyncio
 
-def main():
+async def say_after(delay, prompt):
+    print("program has started")
+    await asyncio.sleep(delay)
 
-    async def say_hello():
-        print("hello_world")
-        await(5)
+    print(prompt)
 
-    async def say_goodbye():
-        print("goodbye")
-
-if __name__ == "__main__":
-    main()
+asyncio.run(say_after(2, "Hello world"))
