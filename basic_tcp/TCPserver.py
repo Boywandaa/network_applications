@@ -1,4 +1,5 @@
 import socket
+import time
 
 #create a tcp socket
 serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -12,11 +13,13 @@ print(f"server is running on {serverAddress}")
 serverSocket.listen(3)
 
 while True:
+
     #establish a new client socket 
     connection_socket, client_addr = serverSocket.accept()
+    # time.sleep(60)
 
     #recieve messages from the established client connection
-    message, _ = connection_socket.recv(2048)
+    message = connection_socket.recv(2048)
 
     if quit == message:
         break
