@@ -45,7 +45,7 @@ class Browser(QMainWindow):
         self.url_bar.setText(q.toString())
 
 app = QApplication(sys.argv)
-QApplication.setApplicationName("Python Browser")
+QApplication.setApplicationName("DevNet Browser")
 window = Browser()
 window.show()
 sys.exit(app.exec_())
