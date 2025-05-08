@@ -24,9 +24,6 @@ Here’s a breakdown of the key applications included:
 ### 🗨️ Messaging
 - `messaging_board/` — Basic message board over the network
 
-### 💻 GUI with Qt
-- `Qt/` — Network-enabled desktop apps using PyQt/PySide
-
 ### 🧪 Miscellaneous
 - `tcp_executor.py` — Run TCP-based commands for testing
 - `requirements.txt` — Python dependencies
