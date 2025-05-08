@@ -1,33 +1,25 @@
-# NET322 Continuous Assessment
+# 🕸️ HTTP Server & PyQt5 Web Browser
 
-## Task
+This project contains a simple asynchronous HTTP server built using Python's `asyncio`, and a custom web browser built with PyQt5. The server serves HTML pages, static assets, and handles basic form submissions. The browser is capable of rendering pages from the local server and provides a fallback option to search online (e.g., Google) when content is not found.
 
-You are required to implement a simple Python AsyncIO concurrent HTTP server.
+## 🚀 Features
 
-### Milestones
+### HTTP Server (`server.py`)
+- Asynchronous request handling using `asyncio`.
+- Supports:
+  - Static pages (HTML templates).
+  - Form handling via POST requests.
+  - Serving static assets like images.
+- Custom response headers.
+- Simple user registration system with file-based storage.
 
-Implement an HTTP server using Python's AsyncIO.
+### PyQt5 Web Browser (`browser.py`)
+- Connects to the local server (`http://localhost:8085`).
+- Renders pages served by the HTTP server.
+- Displays a custom "Page Not Found" page when a local resource doesn't exist.
+- Provides a search bar to redirect to external search engines like Google.
 
-The server should be able to handle HTTP client requests that serve the HTML template resources found in the `templates` directory.
-
-#### Expectation
-
-1. When the server program is running,for instance on localhost:8085, should a Web browser fetch `http://localhost:8085/`, the server should respond with contents of the `index.html` template resource.
-2. Similarly, if browser requests for `http://localhost:8085/register`, the server should respond with the contents of the `register.html` template resource.
-3. Finally when the client (Web browser) is served registration template when calling `http://localhost:8085/register`, on submission of form shown on the page, the server should capture the form details and write the `username` and `email` to a TEXT file called `db.txt`. [HINT : Trap the POST method request].
-
-   The username and email address fields should be written to the `db.txt` as a single line in this format.
-    ```bash
-        username email_address
-    ``` 
-Each entry should be written as a single line, any subsequent entires should be written on a separate line in the same `db.txt` file.
-    
-Achieving this objective fetches a total of 50 marks.
+---
 
 
 
-## Instructions
-Refer to the source files provided.
-
-**Submission of unoriginal work shall be penalized accordingly.**
-````

@@ -25,7 +25,6 @@ Here’s a breakdown of the key applications included:
 - `messaging_board/` — Basic message board over the network
 
 ### 🧪 Miscellaneous
-- `tcp_executor.py` — Run TCP-based commands for testing
 - `requirements.txt` — Python dependencies
 - `venv/` — (Virtual environment folder, not tracked)
 
