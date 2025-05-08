@@ -8,9 +8,10 @@ clients = {}
 async def handler_client(reader, writer):
     #get clients address
     addr = writer.get_extra_info('peername')
+    print(addr)
 
     #generate 8-digit SHA1 hash for client id
-    client_id = hashlib.sha1(addr[1].encode()).hexdigest()[:8]
+    client_id = hashlib.sha1(addr[0].encode()).hexdigest()[:8]
     print(f"Connected by {addr} (ID: {client_id})")
 
     clients[client_id] = writer
@@ -54,8 +55,8 @@ async def broadcast_message(message, sender_id=None):
        
 
 async def main():
-    address = input("Enter server address: ").strip()
-    port = int(input("Enter server port: ").strip())
+    address = '127.0.0.1'
+    port = 12580
 
     server = await asyncio.start_server(handler_client, address , port)
     addr = server.sockets[0].getsockname()
