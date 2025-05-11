@@ -26,7 +26,7 @@ Here’s a breakdown of the key applications included:
 
 ### 🧪 Miscellaneous
 - `requirements.txt` — Python dependencies
-- `venv/` — (Virtual environment folder, not tracked)
+
 
 ## 🛠 Requirements
 
