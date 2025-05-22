@@ -13,7 +13,7 @@ class Browser(QWidget):
         self.layout = QVBoxLayout()
         self.setLayout(self.layout)
 
-        # Search/URL Bar
+          # Search Bar
         self.url_bar = QLineEdit()
         self.url_bar.setPlaceholderText("Enter page name (e.g., register)")
         self.url_bar.returnPressed.connect(self.load_page)
