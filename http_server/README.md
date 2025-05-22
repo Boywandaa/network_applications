@@ -1,8 +1,8 @@
-# 🕸️ HTTP Server & PyQt5 Web Browser
+# HTTP Server & PyQt5 Web Browser
 
 This project contains a simple asynchronous HTTP server built using Python's `asyncio`, and a custom web browser built with PyQt5. The server serves HTML pages, static assets, and handles basic form submissions. The browser is capable of rendering pages from the local server and provides a fallback option to search online (e.g., Google) when content is not found.
 
-## 🚀 Features
+## Features
 
 ### HTTP Server (`server.py`)
 - Asynchronous request handling using `asyncio`.
